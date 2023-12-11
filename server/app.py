@@ -19,6 +19,7 @@ def index():
         200
     )
     return response
+
 @app.route('/pets/<int:id>')
 def pet_by_id(id):
     pet = Pet.query.filter(Pet.id == id).first()
